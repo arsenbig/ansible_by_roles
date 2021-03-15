@@ -1,0 +1,14 @@
+---
+
+db_install:
+  - mariadb-server
+  - mariadb-client
+  - php-fpm
+  - php-mysql
+  - python3-pip
+
+socet_path: '/var/run/mysqld/mysqld.sock'
+
+db_name: 'arsen_db'
+db_user: 'arsenbig'
+db_pass: '123456'

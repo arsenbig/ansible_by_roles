@@ -1,0 +1,7 @@
+---
+
+rem_default:
+  - '/etc/nginx/sites-enabled/default'
+  - '/etc/nginx/sites-available/default'
+
+src_path: '/home/bogart/ansible_by_roles/roles/nginx/templates/nginx_config'

@@ -1,0 +1,10 @@
+---
+
+- name: 'Install mariadb'
+  include_tasks: 'mariadb.yml'
+
+- name: 'Install pymysql'
+  include_tasks: 'pymysql.yml'
+
+- name: 'Create DB and Db user'
+  include_tasks: 'db.yml'

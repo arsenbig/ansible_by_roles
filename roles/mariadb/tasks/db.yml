@@ -1,0 +1,15 @@
+---
+
+- name: 'Create DB'
+  community.mysql.mysql_db:
+    login_unix_socket: '{{ socet_path }}'
+    name: '{{ db_name }}'
+    state: 'present'
+
+- name: 'New DB user'
+  community.mysql.mysql_user:
+    login_unix_socket: '{{ socet_path }}'
+    name: '{{ db_user }}'
+    password: '{{ db_pass }}'
+    priv: '*.*:ALL'
+    state: 'present'

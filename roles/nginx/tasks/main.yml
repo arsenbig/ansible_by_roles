@@ -1,0 +1,21 @@
+---
+
+- name: 'Install all'
+  apt:
+    name: 'nginx'
+    state: 'present'
+  
+- name: 'Remove default website' 
+  file:
+    path: '{{ item }}'
+    state: 'absent'
+  loop: '{{ rem_default }}'
+    
+- name: 'Copy nginx config' 
+  copy:
+    src: '{{ src_path }}'
+    dest: '{{ item }}'
+  loop:
+    - '/etc/nginx/sites-enabled/'
+    - '/etc/nginx/sites-available/'
+  notify: 'Restart nginx'

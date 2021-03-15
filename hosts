@@ -1,0 +1,4 @@
+[testservers]
+slave-VB  ansible_host=10.10.10.5  ansible_user=slave ansible_ssh_private_key_file=/home/bogart/.ssh/id_rsa.pub
+
+slave2-VirtualBox ansible_host=10.10.10.6 ansible_user=slave2 ansible_ssh_private_key_file=/home/bogart/.ssh/id_rsa.pub

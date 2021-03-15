@@ -1,0 +1,7 @@
+---
+
+- name: 'Install mariadb'
+  apt:
+    name: '{{ db_install }}'
+    state: 'present'
+    update_cache: yes

@@ -1,0 +1,6 @@
+---
+
+- name: 'Install pymysql'
+  pip:
+    name: 'pymysql'
+    state: 'present'
